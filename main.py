@@ -17,19 +17,6 @@ else:
     words_to_learn = data.to_dict(orient="records")
 
 
-# def picking_material():
-#     global data
-#     try:
-#         with open("./data/words_to_learn.csv", "r") as words_csv:
-#             words_csv.read()
-#     except FileNotFoundError:
-#         with open("./data/words_to_learn.csv", "w") as words_csv:
-#             data = pd.read_csv("./data/french_words.csv")
-#     else:
-#         data = pd.read_csv("./data/words_to_learn.csv")
-#     return data
-
-
 def is_known():
     words_to_learn.remove(current_card)
     data = pd.DataFrame(words_to_learn)
